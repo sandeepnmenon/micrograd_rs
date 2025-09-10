@@ -1,0 +1,31 @@
+[package]
+name = "micrograd_rs"
+version = "0.1.0"
+edition = "2024"
+authors = ["Sandeep Menon <menonsandu@gmail.com>"]
+description = "A neural network library inspired by micrograd"
+license = "MIT"
+repository = "https://github.com/menonsandu/micrograd_rs"
+homepage = "https://github.com/menonsandu/micrograd_rs"
+documentation = "https://docs.rs/micrograd_rs"
+readme = "README.md"
+keywords = ["neural-network", "machine-learning", "autograd", "deep-learning"]
+categories = ["science", "algorithms"]
+rust-version = "1.85.0"  # MSRV for Rust 2024 edition
+
+[lib]
+name = "micrograd_rs"
+crate-type = ["lib"]
+
+[dependencies]
+
+[dev-dependencies]
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+debug = true
